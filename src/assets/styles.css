@@ -1,0 +1,358 @@
+/* styles.css - Dark Theme Unifié pour toutes les pages */
+
+:root {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --primary-color: #1e90ff;
+  --accent-color: #03dac5;
+  --error-color: #ff6b6b;
+  --success-color: #4caf50;
+  --card-bg: #1e1e1e;
+  --input-bg: #2c2c2c;
+  --border-radius: 8px;
+  --transition: 0.3s ease-in-out;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Login Page */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-color);
+}
+
+.login-form {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+}
+
+.login-form input {
+  background: var(--input-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.login-form label {
+  margin-bottom: 0.5rem;
+}
+
+.login-form button {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.login-form button:hover {
+  background: var(--accent-color);
+}
+
+.error {
+  color: var(--error-color);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Dashboard */
+.dashboard-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 1.5rem;
+}
+
+.back-link,
+.logout-btn {
+  color: var(--accent-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  background: var(--primary-color);
+  color: white;
+}
+
+.admin-actions {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.action-card {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.action-btn {
+  font-size: 1.5rem;
+  background: var(--accent-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  color: var(--bg-color);
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+/* Create & Update Post */
+.form-container,
+.update-post-wrapper {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.form-container h2,
+.update-post-wrapper h1 {
+  text-align: center;
+  color: var(--accent-color);
+}
+
+input,
+textarea {
+  background: var(--input-bg);
+  color: var(--text-color);
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+button[type='submit'] {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button[type='submit']:hover {
+  background: var(--accent-color);
+}
+
+.message {
+  color: var(--success-color);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.info {
+  text-align: center;
+  color: #ccc;
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Post List Page */
+.post-list-wrapper {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--bg-color);  /* Assure que le fond global est bien sombre */
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.post-list-wrapper h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--primary-color);  /* Change le titre en une couleur plus visible */
+}
+
+.top-nav {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.top-nav .dashboard-link {
+  background: var(--primary-color);
+  padding: 0.6rem 1rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  color: var(--bg-color);
+  font-weight: bold;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.top-nav .dashboard-link:hover {
+  background: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.post-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.post-card {
+  background-color: var(--card-bg);  /* Couleur plus claire pour les cartes */
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  color: var(--text-color);  /* Couleur du texte plus claire */
+  text-decoration: none;
+  border: 1px solid var(--primary-color);  /* Bordure plus visible */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);  /* Ombre renforcée */
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  animation: slideIn 0.5s ease-out;
+}
+
+.post-card:hover {
+  background-color: var(--bg-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);  /* Ombre plus intense sur hover */
+}
+
+.post-card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;  /* Augmentation de la taille du titre pour plus de visibilité */
+  color: var(--text-color);  /* S'assurer que le texte est visible */
+}
+
+.post-card .author,
+.post-card .date {
+  font-size: 0.9rem;
+  color: var(--accent-color);  /* Accentuer la visibilité des métadonnées */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delete-post-wrapper {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.delete-post-wrapper h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.delete-btn {
+  background-color: var(--error-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 1rem;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}
+
+.cancel-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s ease;
+}
+
+.cancel-btn:hover {
+  background-color: var(--accent-color);
+}
